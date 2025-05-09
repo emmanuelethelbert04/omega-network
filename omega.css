@@ -1,0 +1,372 @@
+*{
+  margin: 0;
+}
+p{
+  padding: 0;
+  font-feature-settings: "pnum" on,"lnum" on;
+  font-family: "Raleway",sans-serif;
+}
+a{
+  text-decoration: none;
+}
+#active{
+  color: rgb(255, 185, 1);
+  list-style: square;
+}
+ /* for hambuger menu  */
+#side-menu{
+  position: absolute;
+}
+
+/* header section  */
+header{
+  display: flex;
+  justify-content: space-between;
+  height: 55px;
+  background-color: rgb(24, 26, 32);
+  position: relative;
+  z-index: 999;
+  width: 100%;
+}
+.omg-logo{
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+  width: 500px;
+}
+.navlink{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* margin-right: 20px; */
+  list-style: none;
+
+}
+.navlink a {
+  padding: 17px 40px 0 0;
+  font-family: Ralaway, sans-serif;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.navlink a:hover{
+  color: rgb(255, 185, 1) ;
+} 
+.navlink .active{
+  color: rgb(255, 185, 1) ;
+}
+.navlink li:hover{
+  list-style: square;
+  color: rgb(255, 185, 1) ;
+}
+.omg-logo-text{
+  font-size: 20px;
+  font-weight: 600;
+  font-family: Ralaway, sans-serif ;
+  padding-left: 8px;
+  color: rgb(255, 185, 1);
+}
+/* hoverable dropdown */
+.dropdown{
+  position: relative;
+  display: inline-block;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content{
+  display: none;
+  position: absolute;
+  background-color: rgb(24, 26, 32);
+  border-radius: 15px;
+  min-width: 150px;
+}
+.dropdown-content a{
+  color: white;
+  text-decoration:none;
+  display: block;
+  padding: 16px 18px 14px 18px;
+  font-family: Ralaway, sans-serif ;
+}
+.dropdown-content a:hover{
+  color: rgb(255, 185, 1);
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* hero section of this webpage  */
+.omega-hero-place{
+  background-image: url(image/bg-black.svg);
+  background-size: cover;
+  height: calc(100vh - 56px);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+  overflow: hidden;
+}
+.omega-hero-content,
+.omega-hero-img-div{
+  width: 100%;
+  padding-left: 90px;
+  padding-bottom: 60px;
+  z-index: 3;
+}
+.omega-home-page-1{
+  position: absolute;
+  top: -45px;
+  left: 0;
+  width: 305px;
+  height: 305px;
+  animation: spinAround-1 30s linear infinite;
+}
+@keyframes spinAround-1{
+  0%{
+    transform: rotate(0deg)
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+.omega-home-page-2{
+  position: absolute;
+  bottom: -152.5px;
+  width: 305px;
+  height: 305px;
+  left: 30%;
+  animation: spinAround-2 40s linear infinite;
+}
+@keyframes spinAround-2{
+  0%{
+    transform: rotate(0deg)
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+.omega-home-page-3{
+  position: absolute;
+  right: -99px;
+  height: 375px;
+  width: 375px;
+  top: calc(50% - 187.5px);
+  animation: spinAround-3 35s linear infinite;
+}
+@keyframes spinAround-3{
+  0%{
+    transform: rotate(0deg)
+  }
+  100%{
+    transform: rotate(-360deg);
+  }
+}
+.the-future{
+  color: white;
+  font-size: 64px;
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  line-height: 72px;
+}
+.crypto{
+  font-size: 64px;
+  font-family: Raleway, sans-serif;
+  font-weight:700;
+  line-height: 75px;
+  margin-bottom: 12px;
+
+  background: linear-gradient(90deg,#ffa114,#8d35fc 35.94%,#35f0fc 70.31%,#ffa114) no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.easy-mining{
+  color: white;
+  font-size: 1.5rem;
+  line-height: 2rem;    
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  padding-bottom: 45px;
+}
+.btn-div{
+  display: flex;
+}
+button{
+  background-color: #ffb901;
+  border: none;
+  padding: 10px 20px 10px 20px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+}
+button:hover{
+  background-color: #ffa114;
+}
+.icon-img{
+  padding-left: 14px;
+}
+
+.btn-1{
+  border: 2px solid #ffb901;
+  color: #ffb901;
+  background-color: transparent;
+}
+.btn-1:hover{
+  border: 2px solid #ffa114;
+  color: #ffa114;
+  background-color: transparent;
+}
+@media (max-width: 768px){
+  /* Navigation section  */
+  .omg-logo {
+    padding-left: 20px;
+  }
+  header {
+    height: 60px;
+    width: 100%;
+  }
+  .navlink{
+    display: none;
+    background-color: rgb(24, 26, 32);
+    color: white;
+    position: fixed;
+    top: 0;
+    right: -20px;
+    height: 100vh;
+    z-index: 999;
+    flex-direction: column;
+    width: 300px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    animation: slideIn 0.5s ease-in-out ; 
+    animation: slideOut 0.5s ease-in-out ; 
+    overflow-y: scroll;
+  }
+  .navlink a {
+    text-align: left;
+    font-size: 28px;
+    padding: 50px 0;
+  }
+  #menyAvPaa:checked ~ #navbar {
+    transform: translateX(0rem);
+  }
+  #burger {
+    position: absolute;
+    cursor: pointer;
+    width: 40px;
+    height: 30px;
+    right: 20px;
+    top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  #burger > div {
+    height: 3px;
+    background-color: rgb(255, 185, 1);
+    transition: 0.5s;
+    z-index: 999;
+    border-radius: 15px;
+    transition: all 0.4s ease-in-out;
+  }
+  #menyAvPaa:checked ~ #burger > div {
+    background-color: white;
+  }
+  #menyAvPaa:checked ~ #burger > div:nth-child(1) {
+    transform: translateY(12px) rotate(45deg);
+
+  }
+  #menyAvPaa:checked ~ #burger > div:nth-child(2) {
+    opacity: 0;
+
+  }
+  #menyAvPaa:checked ~ #burger > div:nth-child(3) {
+    transform: translateY(-15px) rotate(-45deg);
+  }
+  .dropdown-content {
+    position: absolute;
+    background-color: rgb(12, 13, 15);
+    border-radius: 5px;
+    margin-left: -30px;
+    min-width: 250px;
+    padding: 10px;
+  }
+
+  /* main page Home page  */
+  .omega-hero-place {
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 30px;
+  }
+  .omega-hero-content{
+    padding-left: 100px;
+  }
+  .omega-hero-img-div{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  /* .omega-hero-img-div img{
+    width: 600px;
+  } */
+}
+
+@media (max-width: 475px) {
+  .omg-logo-text {
+    font-size: 18px;
+  }
+  #burger {
+    position: absolute;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    right: 20px;
+    top: 1rem;
+    display: flex;
+  }
+  #menyAvPaa:checked ~ #burger > div:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .navlink {
+    width: 200px;
+  }
+  .navlink a {
+    font-size: 24px;
+    padding: 33px 0;
+  }
+
+  /* main page home page  */
+  .omega-hero-place {
+    padding-top: 150px;
+    padding-bottom: 100px;
+    width: 100%;
+  }
+  .omega-hero-content,
+  .omega-hero-img-div {
+    padding-left: 25px;
+  }
+  .omega-hero-img-div img{
+    width: 100%;
+  }
+  .the-future,
+  .crypto {
+    font-size: 44px;
+    line-height: 55px;
+  }
+  .easy-mining {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    width: 300px;
+  }
+  .btn-div {
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  button {
+    justify-content: center;
+  }
+}
